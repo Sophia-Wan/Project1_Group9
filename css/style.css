@@ -10,12 +10,95 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+/* Global colours */
+:root {
+  --green: #25C389;
+  --yellow: #FFB901;
+  --red: #DE6262;
+  --light-blue: #19B2DE;
+  --dark-blue: #265787;
+  --font-family: "Ubuntu", serif;
+}
 
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  padding: 0;
+  margin: auto;
+  font-family: var(--font-family);
 }
+
+body {
+  width: 70%;
+  margin: auto;
+}
+
+/* Start Angie's header css section */
+header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  float: left;
+
+}
+
+.row img {
+  margin-top: 44px;
+
+}
+
+.mainNav a {
+  text-decoration: none;
+  font-size: 16px;
+  text-align: left;
+  color: #fff;
+}
+
+.mainNav span{
+  padding-right: 0.5vw;
+}
+
+.mainNav li{
+  padding: 30px 10px;
+  width: 7vw;
+  height: 5vh;
+  
+}
+
+.mainNav {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 15vw;
+}
+
+ /* Style colours */
+li:nth-child(1) {
+  background-color: var(--green);
+}
+
+li:nth-child(2) {
+  background-color: var(--yellow);
+}
+
+li:nth-child(3) {
+  background-color: var(--red);
+}
+
+li:nth-child(4) {
+  background-color: var(--light-blue);
+}
+
+li:nth-child(5) {
+  background-color: var(--dark-blue);
+}
+
+/* End Angie's header css section */
 
 /*
  * Remove text-shadow in selection highlight:
