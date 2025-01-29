@@ -30,38 +30,56 @@ body {
   margin: auto;
 }
 
-/* .section-blog {
+.blog {
   display: flex;
-  flex-direction: row;
-} */
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+  justify-content: space-between; /* Adjusts spacing between items */
+}
 
 .blog-entry {
-  position: relative;
-  width: 300px; /* Adjust as needed */
+  flex: 1 1 30%; /* Grow, shrink, and set base width to 30% */
+  max-width: 33.33%; /* Prevents overflow */
+  box-sizing: border-box; /* Ensures padding/margins don’t break layout */
+  padding: 10px; /* Adds spacing between entries */
 }
 
 .bg-date {
   position: absolute;
   color:white;
   background-color: var(--red);
-  top: 10px;
-  left: 10px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 0 10px;
+  max-height: 50px;
+}
+
+.date {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center and raise */
   font-weight: bold;
 }
 
+.year-month {
+  margin-top: 25px; /* Pushes text down */
+}
+
 .post-info {
-  position: absolute;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
   bottom: 10px;
-  left: 10px;
   text-align: left;
   color:white;
+  width: 100%;
   background-color: var(--light-blue);
 }
 
 .post-info p {
   margin: 0; /* Remove default spacing */
+}
+
+.blog-image {
+  width: 100%; /* Ensures it fills the parent */
+  height: auto; /* Keeps aspect ratio */
 }
 
 .bg-icon {
@@ -70,8 +88,8 @@ body {
   right: 10px;
   width: 30px; /* Adjust size */
   height: 30px;
-  background: url('img/icon.png') no-repeat center;
   background-size: cover;
+  background-color: var(--light-blue);
 }
 
 /*
