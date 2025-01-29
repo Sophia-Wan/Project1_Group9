@@ -11,10 +11,67 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+/* Global colours */
+:root {
+  --green: #25C389;
+  --yellow: #FFB901;
+  --red: #DE6262;
+  --light-blue: #19B2DE;
+  --dark-blue: #265787;
+}
+
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  padding: 0;
+  margin: auto;
+}
+
+body {
+  width: 70%;
+  margin: auto;
+}
+
+/* .section-blog {
+  display: flex;
+  flex-direction: row;
+} */
+
+.blog-entry {
+  position: relative;
+  width: 300px; /* Adjust as needed */
+}
+
+.bg-date {
+  position: absolute;
+  color:white;
+  background-color: var(--red);
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.post-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-align: left;
+  color:white;
+  background-color: var(--light-blue);
+}
+
+.post-info p {
+  margin: 0; /* Remove default spacing */
+}
+
+.bg-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px; /* Adjust size */
+  height: 30px;
+  background: url('img/icon.png') no-repeat center;
+  background-size: cover;
 }
 
 /*
