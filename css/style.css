@@ -18,6 +18,7 @@
   --red: #DE6262;
   --light-blue: #19B2DE;
   --dark-blue: #265787;
+  font-family: "Ubuntu", sans-serif;
 }
 
 html {
@@ -34,6 +35,16 @@ body {
   display: flex;
   flex-wrap: wrap; /* Ensures items wrap on smaller screens */
   justify-content: space-between; /* Adjusts spacing between items */
+}
+
+.blog-intro {
+  margin: 0;
+  text-align: center;
+}
+
+.blog-intro__subtitle {
+  margin: 0;
+  text-align: center;
 }
 
 .blog-entry {
