@@ -40,11 +40,17 @@ body {
 .blog-intro {
   margin: 0;
   text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-top: 4rem;
+  padding-bottom: 0.625rem;
 }
 
 .blog-intro__subtitle {
   margin: 0;
   text-align: center;
+  font-weight: 10;
+  padding-bottom: 2rem;
 }
 
 .blog-entry {
