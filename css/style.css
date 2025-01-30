@@ -43,28 +43,29 @@ body {
   font-size: 2rem;
   font-weight: 300;
   padding-top: 4rem;
-  padding-bottom: 0.625rem;
+  padding-bottom: 2px;
 }
 
 .blog-intro__subtitle {
   margin: 0;
   text-align: center;
-  font-weight: 10;
+  font-weight: 100;
   padding-bottom: 2rem;
+  color: gray;
 }
 
 .blog-entry {
   flex: 1 1 30%; /* Grow, shrink, and set base width to 30% */
-  max-width: 33.33%; /* Prevents overflow */
-  box-sizing: border-box; /* Ensures padding/margins don’t break layout */
-  padding: 10px; /* Adds spacing between entries */
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 .bg-date {
   position: absolute;
   color:white;
   background-color: var(--red);
-  padding: 0 10px;
+  padding: 0 1rem;
   max-height: 50px;
 }
 
@@ -72,11 +73,14 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%); /* Center and raise */
-  font-weight: bold;
+  font-size:1.25em;
+  font-weight: 200;
 }
 
 .year-month {
-  margin-top: 25px; /* Pushes text down */
+  margin-top: 30px; /* Pushes text down */
+  font-size: 0.75rem;
+  font-weight: 200;
 }
 
 .post-info {
@@ -90,8 +94,17 @@ body {
   background-color: var(--light-blue);
 }
 
-.post-info p {
-  margin: 0; /* Remove default spacing */
+
+.post-title{
+  font-size:1.25rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.post-genre{
+  font-size:1rem;
+  font-weight: 100;
+  margin: 0;
 }
 
 .blog-image {
@@ -101,10 +114,10 @@ body {
 
 .bg-icon {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 30px; /* Adjust size */
-  height: 30px;
+  bottom: 15px;
+  right: 15px;
+  width: 35px; /* Adjust size */
+  height: 35px;
   background-size: cover;
   background-color: var(--light-blue);
 }
