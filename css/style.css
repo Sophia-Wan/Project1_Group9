@@ -10,12 +10,25 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+   :root {
+    --green: #25C389;
+    --yellow: #FFB901;
+    --red: #DE6262;
+    --light-blue: #19B2DE;
+    --dark-blue: #265787;
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
+  }
+
+   html {
+    padding: 0;
+    margin: auto;
+    font-family: "Ubuntu", serif;
+  }
+  
+  body {
+    width: 70%;
+    margin: auto;
+  }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -245,3 +258,192 @@ textarea {
   }
 }
 
+.page-intro{
+  text-align: center;
+  color: #494949;
+}
+
+span{
+  color: #1EAFDE;
+}
+
+.section-services{
+  text-align: center;
+  color: #494949;
+}
+
+.section-services p{
+text-align: left;
+color: #939393;
+}
+.services{
+  display: flex;
+  justify-content: space-between;
+  color: #494949;
+}
+
+.header-clients{
+  text-align: center;
+}
+
+.client-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ceo-intro{
+  display: flex;
+margin: 5% 15% 0 -5px;
+gap: 2%;
+}
+
+.ceo-intro p{
+  margin-top: 5%;
+  text-align: left;
+  margin-right: 5%;
+}
+
+.ceo-intro-divider{
+  width: 25%;
+  height: 5px;
+  margin-left: 14%;
+  margin-bottom: 5%;
+  background-color: var(--yellow);
+}
+
+
+.footer-content{
+  display: flex;
+  gap: 30px;
+}
+
+.footer-about-content{
+  font-size: 12px;
+  text-align: left;
+  
+}
+.underline{
+  width: 250px;
+  height: 2px;
+  background-color: var(--green);
+}
+.footer-instagram{
+  display: block;
+}
+
+.insta-underline{
+  width: 85%;
+  height: 2px;
+  background-color: var(--light-blue);
+  margin-bottom: 15px;
+}
+.photos{
+  width: 250px;
+}
+
+.mastodon-underline{
+  width: 85%;
+  height: 2px;
+  background-color: var(--yellow);
+
+}
+.footer-mastodon-content{
+  font-size: 12px;
+  
+}
+
+.social-underline{
+  width:250px;
+  height: 2px;
+  background-color: var(--light-blue);
+  margin-bottom: 15px;
+}
+
+.colour-bar{
+  display: flex;
+  margin-bottom: 50px;
+}
+.blue-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--dark-blue);
+}
+
+.red-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--red);
+}
+
+.light-blue-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--light-blue);
+}
+
+.pink-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: #F6679C;
+}
+
+.yellow-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--yellow);
+}
+
+input{
+  width: 200px;
+  height:30px;
+  background-color: var(--red);
+  border: none;
+  color: white;
+}
+
+.send-icon{
+  width: 30px;
+  height: 30px;
+  background-color: var(--yellow);
+ 
+}
+
+.green-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--green);
+}
+
+.yellow-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--yellow);
+}
+
+.red-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--red);
+}
+
+.light-blue-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--light-blue);
+}
+
+.blue-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--dark-blue);
+}
+
+.alert-dialog{
+ display: block;
+  
+}
