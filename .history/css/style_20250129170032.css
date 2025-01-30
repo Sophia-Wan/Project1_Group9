@@ -133,17 +133,6 @@ li:nth-child(5) {
   left: 0;
 }
 
-.banner-flag-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Adds spacing between blocks */
-  position: absolute;
-  top: 30%;
-  left: 5%;
-}
-
-
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301

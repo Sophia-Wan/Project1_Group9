@@ -14,11 +14,9 @@
 :root {
   --green: #25C389;
   --yellow: #FFB901;
-  --hover-yellow: #F0F08C;
   --red: #DE6262;
   --light-blue: #19B2DE;
   --dark-blue: #265787;
-  --gray-banner: #EBEBEB;
   --font-family: "Ubuntu", serif;
 }
 
@@ -55,26 +53,20 @@ header {
 
 .mainNav a {
   text-decoration: none;
-  font-weight: lighter;
-  font-size: 20px;
+  font-size: 16px;
   text-align: left;
   color: #fff;
-  display: flex;
-  align-items: flex-end;
-  height: 50px; 
-  padding-left: 0.5vw;
 }
 
 .mainNav span{
   padding-right: 0.5vw;
-  font-size: 16px;
-  font-weight: 500 !important;
 }
 
 .mainNav li{
   padding: 30px 10px;
-  width: 8vw;
+  width: 7vw;
   height: 5vh;
+  
 }
 
 .mainNav {
@@ -83,7 +75,6 @@ header {
   padding: 0;
   margin: 0;
   float: right;
-  
 }
 
  /* Style colours */
@@ -107,14 +98,6 @@ li:nth-child(5) {
   background-color: var(--dark-blue);
 }
 
-.mainNav li:hover {
-  background-color: var(--hover-yellow);
-}
-
-.mainNav a:hover {
-  color: var(--dark-blue);
-}
-
 /* End Angie's header css section */
 
 .banner {
@@ -126,23 +109,12 @@ li:nth-child(5) {
 
 .banner-background {
   position: absolute;
-  background-color: var(--gray-banner);
+  background-color: gray;
   width: 100%;
   height: 512px;
   z-index: -1;
-  left: 0;
+  margin: 0;
 }
-
-.banner-flag-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Adds spacing between blocks */
-  position: absolute;
-  top: 30%;
-  left: 5%;
-}
-
-
 
 /*
  * Remove text-shadow in selection highlight:

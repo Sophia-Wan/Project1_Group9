@@ -55,7 +55,6 @@ header {
 
 .mainNav a {
   text-decoration: none;
-  font-weight: lighter;
   font-size: 20px;
   text-align: left;
   color: #fff;
@@ -75,6 +74,7 @@ header {
   padding: 30px 10px;
   width: 8vw;
   height: 5vh;
+  
 }
 
 .mainNav {
@@ -107,14 +107,6 @@ li:nth-child(5) {
   background-color: var(--dark-blue);
 }
 
-.mainNav li:hover {
-  background-color: var(--hover-yellow);
-}
-
-.mainNav a:hover {
-  color: var(--dark-blue);
-}
-
 /* End Angie's header css section */
 
 .banner {
@@ -132,17 +124,6 @@ li:nth-child(5) {
   z-index: -1;
   left: 0;
 }
-
-.banner-flag-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Adds spacing between blocks */
-  position: absolute;
-  top: 30%;
-  left: 5%;
-}
-
-
 
 /*
  * Remove text-shadow in selection highlight:

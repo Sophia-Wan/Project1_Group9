@@ -133,7 +133,7 @@ li:nth-child(5) {
   left: 0;
 }
 
-.banner-flag-container {
+.page-banner-flag {
   display: flex;
   flex-direction: column;
   gap: 10px; /* Adds spacing between blocks */
@@ -141,8 +141,6 @@ li:nth-child(5) {
   top: 30%;
   left: 5%;
 }
-
-
 
 /*
  * Remove text-shadow in selection highlight:
