@@ -276,6 +276,7 @@ span{
 text-align: left;
 color: #939393;
 }
+
 .services{
   display: flex;
   justify-content: space-between;
@@ -290,54 +291,62 @@ color: #939393;
   display: flex;
   justify-content: space-between;
 }
+
+
+/* Start footer Style */
 footer{
   width: 100%;
-  height: 598px;
+  height: auto;
   position: absolute;
   left: 0;
   margin-top: 5%;
   background-color: var(--dark-blue);
 }
 
-
+.footer-ceo {
+  margin-top: 3vh;
+}
 
 .ceo-intro{
   display: flex;
-  margin: 5% 15% 0 100px;
-  gap: 2%;
+  width: 70%;
+  margin: auto;
 }
 
 .ceo-intro p{
-
+  width: 70%;
+  margin-left: 5%;
   text-align: left;
-  margin-right: 5%;
   color: white;
 }
 
 .ceo-intro-divider{
-  width: 25%;
-  height: 5px;
-  margin-left: 14%;
+  width: 15%;
+  height: 3px;
+  margin-left: 27.5vw;
   background-color: var(--yellow);
 }
 
 
 .footer-content{
+  width: 70%;
+  margin: auto;
   display: flex;
-  gap: 30px;
-  margin-left: 5%;
-  margin-right: 5%;
+  gap: 1%;
   color:white;
 }
 
-.footer-about-content{
+.footer-about{
   font-size: 12px;
+  width: 16.75%;
   text-align: left;
   color: white;
 }
-.footer-about-content h5{
+
+.footer-about h5{
   color: var(--yellow);
 }
+
 .underline{
   width: 250px;
   height: 2px;
@@ -345,6 +354,7 @@ footer{
 }
 .footer-instagram{
   display: block;
+  width: 16.75%;
 }
 
 .insta-underline{
@@ -354,7 +364,11 @@ footer{
   margin-bottom: 15px;
 }
 .photos{
-  width: 250px;
+  width: 150px;
+}
+
+.footer-mastodon{
+  width: 25.125%;
 }
 
 .mastodon-underline{
@@ -368,6 +382,10 @@ footer{
   
 }
 
+.footer-social-media {
+  width: 8.375%;
+  height: auto;
+}
 .social-underline{
   width:250px;
   height: 2px;
@@ -375,42 +393,44 @@ footer{
   margin-bottom: 15px;
 }
 
+
 .colour-bar{
   display: flex;
+  gap: 2%;
   margin-bottom: 50px;
 }
 .blue-box{
   width: 55px;
   height: 55px;
-  border-radius: 15%;
-  background-color: var(--dark-blue);
+  border-radius: 5%;
+  background-color: blue;
 }
 
 .red-box{
   width: 55px;
   height: 55px;
-  border-radius: 15%;
+  border-radius: 5%;
   background-color: var(--red);
 }
 
 .light-blue-box{
   width: 55px;
   height: 55px;
-  border-radius: 15%;
+  border-radius: 5%;
   background-color: var(--light-blue);
 }
 
 .pink-box{
   width: 55px;
   height: 55px;
-  border-radius: 15%;
+  border-radius: 5%;
   background-color: #F6679C;
 }
 
 .yellow-box{
   width: 55px;
   height: 55px;
-  border-radius: 15%;
+  border-radius: 5%;
   background-color: var(--yellow);
 }
 
@@ -429,42 +449,4 @@ input{
  
 }
 
-.green-dialog-box{
-  height: 5px;
-  width: 30px;
-  background-color: var(--green);
-}
 
-.yellow-dialog-box{
-  height: 5px;
-  width: 30px;
-  background-color: var(--yellow);
-}
-
-.red-dialog-box{
-  height: 5px;
-  width: 30px;
-  background-color: var(--red);
-}
-
-.light-blue-dialog-box{
-  height: 5px;
-  width: 30px;
-  background-color: var(--light-blue);
-}
-
-.blue-dialog-box{
-  height: 5px;
-  width: 30px;
-  background-color: var(--dark-blue);
-}
-
-.alert-dialog{
- display: flex;
- align-items: flex-end;
-  justify-content: flex-start;
-
-  bottom: 0;
-  left: 0;
-  padding: 10px; 
-}
