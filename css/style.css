@@ -21,7 +21,7 @@
 
    html {
     padding: 0;
-    margin: auto;
+    margin: 0;
     font-family: "Ubuntu", serif;
   }
   
@@ -290,24 +290,34 @@ color: #939393;
   display: flex;
   justify-content: space-between;
 }
+footer{
+  width: 100%;
+  height: 598px;
+  position: absolute;
+  left: 0;
+  margin-top: 5%;
+  background-color: var(--dark-blue);
+}
+
+
 
 .ceo-intro{
   display: flex;
-margin: 5% 15% 0 -5px;
-gap: 2%;
+  margin: 5% 15% 0 100px;
+  gap: 2%;
 }
 
 .ceo-intro p{
-  margin-top: 5%;
+
   text-align: left;
   margin-right: 5%;
+  color: white;
 }
 
 .ceo-intro-divider{
   width: 25%;
   height: 5px;
   margin-left: 14%;
-  margin-bottom: 5%;
   background-color: var(--yellow);
 }
 
@@ -315,12 +325,18 @@ gap: 2%;
 .footer-content{
   display: flex;
   gap: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  color:white;
 }
 
 .footer-about-content{
   font-size: 12px;
   text-align: left;
-  
+  color: white;
+}
+.footer-about-content h5{
+  color: var(--yellow);
 }
 .underline{
   width: 250px;
@@ -444,6 +460,11 @@ input{
 }
 
 .alert-dialog{
- display: block;
-  
+ display: flex;
+ align-items: flex-end;
+  justify-content: flex-start;
+
+  bottom: 0;
+  left: 0;
+  padding: 10px; 
 }
