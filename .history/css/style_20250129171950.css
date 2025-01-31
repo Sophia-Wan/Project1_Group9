@@ -50,12 +50,13 @@ header {
 
 .row img {
   margin-top: 44px;
+
 }
 
 .mainNav a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
+  font-weight: lighter;
+  font-size: 20px;
   text-align: left;
   color: #fff;
   display: flex;
@@ -65,17 +66,15 @@ header {
 }
 
 .mainNav span{
-  padding-left: 0.5vw;
-  font-size: 20px;
-  font-weight: lighter;
+  padding-right: 0.5vw;
+  font-size: 16px;
+  font-weight: 500 !important;
 }
 
 .mainNav li{
   padding: 30px 10px;
   width: 8vw;
   height: 5vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  flex: 1;
 }
 
 .mainNav {
@@ -112,16 +111,11 @@ li:nth-child(5) {
   background-color: var(--hover-yellow);
 }
 
-.mainNav li:hover a {
+.mainNav a:hover {
   color: var(--dark-blue);
-  background-color: transparent;
 }
 
-.mainNav li:hover a span {
-  opacity: 0;
-}
-
-/* Start Banner Css */
+/* End Angie's header css section */
 
 .banner {
   margin: 0;
@@ -142,7 +136,7 @@ li:nth-child(5) {
 .banner-flag-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   position: absolute;
   top: 40%;
   left: 20%;
@@ -151,16 +145,12 @@ li:nth-child(5) {
 .page-banner-flag {
   background-color: white;
   opacity: 80%;
-  padding: 0 20px;
+  padding: 5px 20px;
+  font-weight: 400;
+  font-size: 16px;
   display: flex;
   align-items: center;
-  width: fit-content;
   position: relative;
-}
-
-.page-banner-flag h2 {
-  font-weight: 500;
-  font-size: 1.25em;
 }
 
 .page-banner-flag::before {
@@ -173,19 +163,16 @@ li:nth-child(5) {
 }
 
 .blue::before {
-  background: var(--dark-blue);
+  background: #1E64A6; /* Blue */
 }
 
 .red::before {
-  background: var(--red);
+  background: #D04A42; /* Red */
 }
 
 .yellow::before {
-  background: var(--yellow);
+  background: #E7B534; /* Yellow */
 }
-
-/* End Angie's header css section */
-
 
 /*
  * Remove text-shadow in selection highlight:

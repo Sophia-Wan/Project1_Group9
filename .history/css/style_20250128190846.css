@@ -10,36 +10,18 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-/* Global colours */
-:root {
-  --green: #25C389;
-  --yellow: #FFB901;
-  --hover-yellow: #F0F08C;
-  --red: #DE6262;
-  --light-blue: #19B2DE;
-  --dark-blue: #265787;
-  --gray-banner: #EBEBEB;
-  --font-family: "Ubuntu", serif;
-}
-
 
 html {
-  padding: 0;
-  margin: auto;
-  font-family: var(--font-family);
-}
-
-body {
-  width: 70%;
-  margin: auto;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 /* Start Angie's header css section */
 header {
   overflow: hidden;
   background-color: #fff;
-  padding: 0;
-  margin: 0;
+  padding: 20px 10px;
 }
 
 .row {
@@ -49,143 +31,23 @@ header {
 }
 
 .row img {
-  margin-top: 44px;
+  align-content: center;
+
 }
 
 .mainNav a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
-  color: #fff;
-  display: flex;
-  align-items: flex-end;
-  height: 50px; 
-  padding-left: 0.5vw;
-}
-
-.mainNav span{
-  padding-left: 0.5vw;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-.mainNav li{
-  padding: 30px 10px;
-  width: 8vw;
-  height: 5vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  flex: 1;
+  font-size: 17px;
 }
 
 .mainNav {
   list-style-type: none;
   display: flex;
-  padding: 0;
-  margin: 0;
-  float: right;
+  
   
 }
 
- /* Style colours */
-li:nth-child(1) {
-  background-color: var(--green);
-}
-
-li:nth-child(2) {
-  background-color: var(--yellow);
-}
-
-li:nth-child(3) {
-  background-color: var(--red);
-}
-
-li:nth-child(4) {
-  background-color: var(--light-blue);
-}
-
-li:nth-child(5) {
-  background-color: var(--dark-blue);
-}
-
-.mainNav li:hover {
-  background-color: var(--hover-yellow);
-}
-
-.mainNav li:hover a {
-  color: var(--dark-blue);
-  background-color: transparent;
-}
-
-.mainNav li:hover a span {
-  opacity: 0;
-}
-
-/* Start Banner Css */
-
-.banner {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 512px;
-}
-
-.banner-background {
-  position: absolute;
-  background-color: var(--gray-banner);
-  width: 100%;
-  height: 512px;
-  z-index: -1;
-  left: 0;
-}
-
-.banner-flag-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  position: absolute;
-  top: 40%;
-  left: 20%;
-}
-
-.page-banner-flag {
-  background-color: white;
-  opacity: 80%;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  position: relative;
-}
-
-.page-banner-flag h2 {
-  font-weight: 500;
-  font-size: 1.25em;
-}
-
-.page-banner-flag::before {
-  content: "";
-  width: 10px;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.blue::before {
-  background: var(--dark-blue);
-}
-
-.red::before {
-  background: var(--red);
-}
-
-.yellow::before {
-  background: var(--yellow);
-}
-
 /* End Angie's header css section */
-
 
 /*
  * Remove text-shadow in selection highlight:

@@ -50,24 +50,26 @@ header {
 
 .row img {
   margin-top: 44px;
+
 }
 
 .mainNav a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
+  font-weight: lighter;
+  font-size: 20px;
   text-align: left;
   color: #fff;
   display: flex;
   align-items: flex-end;
   height: 50px; 
   padding-left: 0.5vw;
+  
 }
 
 .mainNav span{
-  padding-left: 0.5vw;
-  font-size: 20px;
-  font-weight: lighter;
+  padding-right: 0.5vw;
+  font-size: 16px;
+  font-weight: 500 !important;
 }
 
 .mainNav li{
@@ -108,20 +110,25 @@ li:nth-child(5) {
   background-color: var(--dark-blue);
 }
 
-.mainNav li:hover {
-  background-color: var(--hover-yellow);
-}
-
 .mainNav li:hover a {
-  color: var(--dark-blue);
-  background-color: transparent;
+  color: var(--dark-blue); 
+  background-color: transparent; 
 }
 
-.mainNav li:hover a span {
-  opacity: 0;
+.mainNav a::after {
+  content: " >"; /* Thêm dấu '>' sau chữ */
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 5px;
+  transition: color 0.3s ease;
 }
 
-/* Start Banner Css */
+/* Khi hover, đổi màu dấu '>' thành màu nền */
+.mainNav li:hover a::after {
+  color: var(--hover-yellow);
+}
+
+/* End Angie's header css section */
 
 .banner {
   margin: 0;
@@ -183,9 +190,6 @@ li:nth-child(5) {
 .yellow::before {
   background: var(--yellow);
 }
-
-/* End Angie's header css section */
-
 
 /*
  * Remove text-shadow in selection highlight:
