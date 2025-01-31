@@ -10,7 +10,6 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 /* Global colours */
 :root {
   --green: #25C389;
@@ -23,11 +22,12 @@
   --font-family: "Ubuntu", serif;
 }
 
+
 html {
   padding: 0;
   margin: auto;
   font-family: var(--font-family);
-    }
+}
 
 body {
   width: 70%;
@@ -50,12 +50,13 @@ header {
 
 .row img {
   margin-top: 44px;
+
 }
 
 .mainNav a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
+  font-weight: lighter;
+  font-size: 20px;
   text-align: left;
   color: #fff;
   display: flex;
@@ -65,17 +66,15 @@ header {
 }
 
 .mainNav span{
-  padding-left: 0.5vw;
-  font-size: 20px;
-  font-weight: lighter;
+  padding-right: 0.5vw;
+  font-size: 16px;
+  font-weight: 500 !important;
 }
 
 .mainNav li{
   padding: 30px 10px;
   width: 8vw;
   height: 5vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  flex: 1;
 }
 
 .mainNav {
@@ -112,16 +111,11 @@ li:nth-child(5) {
   background-color: var(--hover-yellow);
 }
 
-.mainNav li:hover a {
+.mainNav a:hover {
   color: var(--dark-blue);
-  background-color: transparent;
 }
 
-.mainNav li:hover a span {
-  opacity: 0;
-}
-
-/* Start Banner Css */
+/* End Angie's header css section */
 
 .banner {
   margin: 0;
@@ -142,25 +136,20 @@ li:nth-child(5) {
 .banner-flag-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px; /* Adds spacing between blocks */
   position: absolute;
-  top: 40%;
-  left: 20%;
+  top: 30%;
+  left: 10%;
 }
 
 .page-banner-flag {
-  background-color: white;
-  opacity: 80%;
-  padding: 0 20px;
+  background: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
   display: flex;
   align-items: center;
-  width: fit-content;
   position: relative;
-}
-
-.page-banner-flag h2 {
-  font-weight: 500;
-  font-size: 1.25em;
 }
 
 .page-banner-flag::before {
@@ -173,153 +162,16 @@ li:nth-child(5) {
 }
 
 .blue::before {
-  background: var(--dark-blue);
+  background: #1E64A6; /* Blue */
 }
 
 .red::before {
-  background: var(--red);
+  background: #D04A42; /* Red */
 }
 
 .yellow::before {
-  background: var(--yellow);
+  background: #E7B534; /* Yellow */
 }
-
-/* End Angie's header css section */
-
-.blog {
-  display: flex;
-  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
-  justify-content: space-between; /* Adjusts spacing between items */
-}
-
-.blog-intro {
-  margin: 0;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 300;
-  padding-top: 4rem;
-  padding-bottom: 2px;
-}
-
-.blog-intro__subtitle {
-  margin: 0;
-  text-align: center;
-  font-weight: 100;
-  padding-bottom: 2rem;
-  color: gray;
-}
-
-.blog-entry {
-  flex: 1 1 calc(33.33% - 16px); 
-  max-width: 33.33%;
-  box-sizing: border-box;
-  padding: 1rem;
-}
-
-.bg-date {
-  display: flex;
-  position: absolute;
-  color:white;
-  background-color: var(--red);
-  padding: 0 1rem;
-  max-height: 50px;
-}
-
-.date {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center and raise */
-  font-size:1.25em;
-  font-weight: 200;
-}
-
-.year-month {
-  margin-top: 30px; /* Pushes text down */
-  font-size: 0.75rem;
-  font-weight: 200;
-}
-
-.post-info {
-  position: relative;
-  box-sizing: border-box;
-  padding: 4px 10px;
-  bottom: 10px;
-  text-align: left;
-  color:white;
-  width: 100%;
-  background-color: var(--light-blue);
-}
-
-
-.post-title{
-  font-size:1rem;
-  font-weight: 200;
-  margin: 4px 0;
-
-}
-
-.post-genre{
-  font-size:12px;
-  font-weight: 100;
-  margin: 0;
-  padding-bottom: 4px;
-}
-
-.blog-image {
-  width: 100%;
-  height: auto; 
-}
-
-.bg-icon {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  width: 28px;
-  height: 28px;
-  background-size: cover;
-  background-color: var(--light-blue);
-}
-
-/* Tablet (632px) */
-@media (max-width: 632px) {
-  .blog {
-    grid-template-columns: 1fr; /* First entry takes full width */
-  }
-
-  .blog-entry:first-child {
-    width: 100%;
-  }
-
-  .blog-entry:nth-child(2),
-  .blog-entry:nth-child(3) {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* The two remaining entries side by side */
-  }
-}
-
-/* Mobile (432px) */
-@media (max-width: 432px) {
-  .blog {
-    flex-direction: column; /* Stack elements in a column */
-    align-items: center; /* Center align items */
-  }
-
-  .blog-entry {
-    width: calc(100% - 32px); /* 100% width minus 16px margin on both sides */
-    margin: 0 16px; /* Ensures 16px margin on both sides */
-  }
-}
-   html {
-    padding: 0;
-    margin: 0;
-    font-family: "Ubuntu", serif;
-  }
-  
-  body {
-    width: 70%;
-    margin: auto;
-  }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -549,237 +401,3 @@ textarea {
   }
 }
 
-
-
-/* hey folks*/
-.page-intro{
-  text-align: center;
-  color: #494949;
-}
-
-span{
-  color: #1EAFDE;
-}
-
-.section-services{
-  text-align: center;
-  color: #494949;
-}
-
-.section-services p{
-text-align: left;
-color: #939393;
-}
-
-.services{
-  display: flex;
-  justify-content: space-between;
-  color: #494949;
-}
-/*Client area*/
-.header-clients{
-  text-align: center;
-}
-
-.client-list{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-/* Start footer Style */
-footer{
-  width: 100%;
-  height: auto;
-  position: absolute;
-  left: 0;
-  margin-top: 5%;
-  background-color: var(--dark-blue);
-}
-
-.footer-ceo {
-  margin-top: 3vh;
-}
-
-.ceo-intro{
-  display: flex;
-  width: 70%;
-  margin: auto;
-}
-
-.ceo-intro p{
-  width: 70%;
-  margin-left: 5%;
-  text-align: left;
-  color: white;
-  font-size: 12px;
-  margin-top: 5%;
-}
-
-.ceo-intro-divider{
-  width: 15%;
-  height: 3px;
-  margin-left: 27.5vw;
-  background-color: var(--yellow);
-}
-
-.footer-content{
-  width: 70%;
-  margin: auto;
-  display: flex;
-  gap: 2%;
-  color:white;
-  justify-content: space-between;
-}
-/*about us*/
-.footer-about{
-  flex: 2;
-  flex-direction: column;
-  display: flex;
-}
-
-.footer-about p{
-  font-size: 12px;
-  text-align: left;
-  color: white;
-  
-}
-.footer-about h5{
-  color: var(--yellow);
- margin-bottom: 2%;
-}
-.underline{
-  width: 125px;
-  height: 2px;
-  background-color: var(--green);
-  
-}
-
-
-/*instagram*/
-.footer-instagram{
-  flex: 2;
- 
-}
-.footer-instagram h5{
-  color: var(--red);
-  margin-bottom: 2%;
-  
-}
-.insta-underline{
-  width: 100%;
-  height: 2px;
-  background-color: var(--light-blue);
-  margin-bottom: 15px;
-}
-.photos{
-  width: 200px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2%;
-}
-/*mastodon*/
-.footer-mastodon{
-  flex: 3;
-}
-.footer-mastodon h5{
-  color: var(--light-blue);
-  margin-bottom: 2%;
-}
-.mastodon-underline{
-  width: 85%;
-  height: 2px;
-  background-color: var(--yellow);
-
-}
-.footer-mastodon-content{
-  font-size: 12px;
-  width: 250px;
-}
-
-/*track us*/
-.footer-social-media {
-  flex: 1;
-  height: auto;
-}
-.footer-social-media h5{
- margin-bottom: 2%;
-}
-.social-underline{
-  width:175px;
-  height: 2px;
-  background-color: var(--light-blue);
-  margin-bottom: 13px;
-}
-
-.colour-bar{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3%;
-  margin-bottom: 50px;
-}
-.blue-box{
-  width: 40px;
-  height: 40px;
-  border-radius: 5%;
-  background-color: blue;
-}
-
-.red-box{
-  width: 40px;
-  height: 40px;
-  border-radius: 5%;
-  background-color: var(--red);
-}
-
-.light-blue-box{
-  width: 40px;
-  height: 40px;
-  border-radius: 5%;
-  background-color: var(--light-blue);
-}
-
-.pink-box{
-  width: 40px;
-  height: 40px;
-  border-radius: 5%;
-  background-color: #F6679C;
-}
-
-.yellow-box{
-  width: 40px;
-  height: 40px;
-  border-radius: 5%;
-  background-color: var(--yellow);
-}
-/*enter your email*/
-.newsletter-form {
-  display: flex; 
-  align-items: center;
-  gap: 5px; 
-}
-
-input{
-  width: 150px;
-  height:30px;
-  background-color: var(--red);
-  border: none;
-}
-::placeholder{
-  color: white;
-}
-
-.submit{
-  all: unset; 
-}
-
-.send-icon{
-  width: 30px;
-  height: 30px;
-  background-color: var(--yellow);
- 
-}
-
-.bottom-colored-bars{
-  margin-left: 185px;
-}
