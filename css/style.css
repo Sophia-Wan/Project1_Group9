@@ -119,15 +119,15 @@ body {
 }
 
 .blog-image {
-  width: 100%; /* Ensures it fills the parent */
-  height: auto; /* Keeps aspect ratio */
+  width: 100%;
+  height: auto; 
 }
 
 .bg-icon {
   position: absolute;
   bottom: 12px;
   right: 12px;
-  width: 28px; /* Adjust size */
+  width: 28px;
   height: 28px;
   background-size: cover;
   background-color: var(--light-blue);
