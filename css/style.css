@@ -318,6 +318,8 @@ footer{
   margin-left: 5%;
   text-align: left;
   color: white;
+  font-size: 12px;
+  margin-top: 5%;
 }
 
 .ceo-intro-divider{
@@ -327,49 +329,51 @@ footer{
   background-color: var(--yellow);
 }
 
-
 .footer-content{
   width: 70%;
   margin: auto;
   display: flex;
-  gap: 1%;
+  gap: 2%;
   color:white;
   justify-content: space-between;
 }
 /*about us*/
 .footer-about{
   flex: 2;
-  
+  flex-direction: column;
+  display: flex;
 }
+
 .footer-about p{
   font-size: 12px;
   text-align: left;
   color: white;
+  
 }
 .footer-about h5{
   color: var(--yellow);
-  margin-bottom: .5%;
+ margin-bottom: 2%;
 }
 .underline{
   width: 125px;
   height: 2px;
   background-color: var(--green);
-  margin-top: 3%;
+  
 }
 
 
 /*instagram*/
 .footer-instagram{
-  display: block;
-  margin-left: auto;
-  flex: 2.5;
+  flex: 2;
+ 
 }
 .footer-instagram h5{
   color: var(--red);
   margin-bottom: 2%;
+  
 }
 .insta-underline{
-  width: 85%;
+  width: 100%;
   height: 2px;
   background-color: var(--light-blue);
   margin-bottom: 15px;
@@ -396,7 +400,7 @@ footer{
 }
 .footer-mastodon-content{
   font-size: 12px;
-  
+  width: 250px;
 }
 
 /*track us*/
@@ -408,10 +412,10 @@ footer{
  margin-bottom: 2%;
 }
 .social-underline{
-  width:200px;
+  width:175px;
   height: 2px;
   background-color: var(--light-blue);
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .colour-bar{
@@ -482,4 +486,6 @@ input{
  
 }
 
-
+.bottom-colored-bars{
+  margin-left: 185px;
+}
