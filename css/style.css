@@ -257,7 +257,7 @@ textarea {
     page-break-after: avoid;
   }
 }
-
+/* hey folks*/
 .page-intro{
   text-align: center;
   color: #494949;
@@ -282,7 +282,7 @@ color: #939393;
   justify-content: space-between;
   color: #494949;
 }
-
+/*Client area*/
 .header-clients{
   text-align: center;
 }
@@ -334,29 +334,40 @@ footer{
   display: flex;
   gap: 1%;
   color:white;
+  justify-content: space-between;
 }
-
+/*about us*/
 .footer-about{
+  flex: 2;
+  
+}
+.footer-about p{
   font-size: 12px;
-  width: 16.75%;
   text-align: left;
   color: white;
 }
-
 .footer-about h5{
   color: var(--yellow);
+  margin-bottom: .5%;
 }
-
 .underline{
-  width: 250px;
+  width: 125px;
   height: 2px;
   background-color: var(--green);
-}
-.footer-instagram{
-  display: block;
-  width: 16.75%;
+  margin-top: 3%;
 }
 
+
+/*instagram*/
+.footer-instagram{
+  display: block;
+  margin-left: auto;
+  flex: 2.5;
+}
+.footer-instagram h5{
+  color: var(--red);
+  margin-bottom: 2%;
+}
 .insta-underline{
   width: 85%;
   height: 2px;
@@ -364,13 +375,19 @@ footer{
   margin-bottom: 15px;
 }
 .photos{
-  width: 150px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
 }
-
+/*mastodon*/
 .footer-mastodon{
-  width: 25.125%;
+  flex: 3;
 }
-
+.footer-mastodon h5{
+  color: var(--light-blue);
+  margin-bottom: 2%;
+}
 .mastodon-underline{
   width: 85%;
   height: 2px;
@@ -382,64 +399,80 @@ footer{
   
 }
 
+/*track us*/
 .footer-social-media {
-  width: 8.375%;
+  flex: 1;
   height: auto;
 }
+.footer-social-media h5{
+ margin-bottom: 2%;
+}
 .social-underline{
-  width:250px;
+  width:200px;
   height: 2px;
   background-color: var(--light-blue);
   margin-bottom: 15px;
 }
 
-
 .colour-bar{
   display: flex;
-  gap: 2%;
+  flex-wrap: wrap;
+  gap: 3%;
   margin-bottom: 50px;
 }
 .blue-box{
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 5%;
   background-color: blue;
 }
 
 .red-box{
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 5%;
   background-color: var(--red);
 }
 
 .light-blue-box{
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 5%;
   background-color: var(--light-blue);
 }
 
 .pink-box{
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 5%;
   background-color: #F6679C;
 }
 
 .yellow-box{
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 5%;
   background-color: var(--yellow);
 }
+/*enter your email*/
+.newsletter-form {
+  display: flex; 
+  align-items: center;
+  gap: 5px; 
+}
 
 input{
-  width: 200px;
+  width: 150px;
   height:30px;
   background-color: var(--red);
   border: none;
+}
+::placeholder{
   color: white;
+}
+
+.submit{
+  all: unset; 
 }
 
 .send-icon{
