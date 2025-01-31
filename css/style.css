@@ -96,15 +96,17 @@ body {
 
 
 .post-title{
-  font-size:1.25rem;
+  font-size:1rem;
   font-weight: 200;
-  margin: 0;
+  margin: 4px 0;
+
 }
 
 .post-genre{
-  font-size:1rem;
+  font-size:12px;
   font-weight: 100;
   margin: 0;
+  padding-bottom: 4px;
 }
 
 .blog-image {
@@ -120,6 +122,20 @@ body {
   height: 35px;
   background-size: cover;
   background-color: var(--light-blue);
+}
+
+/* Tablet (632px) */
+@media (max-width: 632px) {
+  .section-blog {
+    flex-wrap: wrap;
+  }
+  .blog-entry {
+    max-width: 50%;
+  }
+}
+
+/* Mobile (432px) */
+@media (max-width: 432px) {
 }
 
 /*
@@ -349,3 +365,6 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+
+
