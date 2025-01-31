@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Most Bodacious Blog</title>
+  <title>Angie's Most Bodacious Blog</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="The most interestting blog in existence">
 
@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -29,28 +30,34 @@
 <body class="page page-home">
   <header class="page-header"> 
     <div class="row">
-      <img src="Logo.svg" alt="Metrolics logo">
+      <h2>Metrolics</h2>
+      <img src="logo.png" alt="logo">
     </div>
 
-      <ul class="mainNav">
+      <ul class="mainnav column">
         <li>
-          <a href="#"><Span>Home</Span>></a>
+          <a href="#">Home</a>
+          <div class="dropdown">v</div>
         </li>
         
         <li>
-          <a href="#"><Span>Portfolio</Span>></a>
+          <a href="#">Portfolio</a>
+          <div class="dropdown">v</div>
         </li>
 
         <li>
-          <a href="#"><Span>Blog</Span>></a>
+          <a href="#">Blog</a>
+          <div class="dropdown">v</div>
         </li>
         
         <li>
-          <a href="#"><Span>Quo Vadis?</Span>></a>
+          <a href="#">Quo Vadis?</a>
+          <div class="dropdown">v</div>
         </li>
 
         <li>
-          <a href="#"><Span>Lets Chat</Span>></a>
+          <a href="lets-chat">Lets Chat</a>
+          <div class="dropdown">v</div>
         </li>
 
       </ul>
@@ -113,8 +120,8 @@
   </section>
 
   <section class="section-blog">
-    <h2 class="blog-intro">What's Up Lately</h2>
-    <h4 class="blog-intro__subtitle">Read up on our latest work</h4>
+    <h2>What's Up Lately</h2>
+    <h4>Read up on our latest work</h4>
 
     <div class="blog">
       <div class="blog-entry">
@@ -124,8 +131,8 @@
         </div>
           <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
           <div class="post-info">
-            <p class="post-title">Sample Image Post</p>
-            <p class ="post-genre">Photography</p>
+            <p>Sample Image Post</p>
+            <p>Photography</p>
             <img class="bg-icon" src="img/BG_icon.png" alt="background icon">
           </div>
       </div>
@@ -137,8 +144,8 @@
         </div>
         <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
         <div class="post-info">
-          <p class="post-title">Sample Image Post</p>
-          <p class ="post-genre">Photography</p>
+            <p>Sample Image Post</p>
+            <p>Photography</p>
             <img class="bg-icon" src="img/BG_icon.png" alt="background icon">
         </div>
       </div>
@@ -150,8 +157,8 @@
         </div>
         <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
         <div class="post-info">
-          <p class="post-title">Sample Image Post</p>
-          <p class ="post-genre">Photography</p>
+            <p>Sample Image Post</p>
+            <p>Photography</p>
             <img class="bg-icon" src="img/BG_icon.png" alt="background icon">
         </div>
       </div>
@@ -159,28 +166,16 @@
   </section>
 
   <section class="section-portfolio">
-    <h2 class="blog-intro">Our Best Work. Period.</h2>
-    <h4 class="blog-intro__subtitle">Client happy? We are happy.</h4>
+    <h2>Our Best Work. Period.</h2>
+    <h4>Client happy? We are happy.</h4>
 
-    <div class="blog">
-      <div class="blog-entry">
-        <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
-      </div>
-      <div class="blog-entry">
-        <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
-      </div>
-      <div class="blog-entry">
-        <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
-      </div>
-      <div class="blog-entry">
-        <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
-      </div>
-      <div class="blog-entry">
-        <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
-      </div>
-      <div class="blog-entry">
-        <img class ="blog-image" src="img/calendar.png" alt="Sample Image Post">
-      </div>
+    <div class="projects">
+      <img src="project.png" alt="IMG_Content" class="project">
+      <img src="project.png" alt="IMG_Content" class="project">
+      <img src="project.png" alt="IMG_Content" class="project">
+      <img src="project.png" alt="IMG_Content" class="project">
+      <img src="project.png" alt="IMG_Content" class="project">
+      <img src="project.png" alt="IMG_Content" class="project">
     </div>
   </section>
 
@@ -270,7 +265,7 @@
         <input type="email" placeholder="Enter your Email...">
         <button class="submit"><i class="send-icon"></i></button>
       </div>
-      
+  
     </section>
   
     <div class="alert-dialog">
