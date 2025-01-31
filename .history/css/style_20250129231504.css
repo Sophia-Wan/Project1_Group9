@@ -1,0 +1,449 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+   :root {
+    --green: #25C389;
+    --yellow: #FFB901;
+    --red: #DE6262;
+    --light-blue: #19B2DE;
+    --dark-blue: #265787;
+
+  }
+
+   html {
+    padding: 0;
+    margin: auto;
+    font-family: "Ubuntu", serif;
+  }
+  
+  body {
+    width: 70%;
+    margin: auto;
+  }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+.page-intro{
+  text-align: center;
+  color: #494949;
+}
+
+span{
+  color: #1EAFDE;
+}
+
+.section-services{
+  text-align: center;
+  color: #494949;
+}
+
+.section-services p{
+text-align: left;
+color: #939393;
+}
+.services{
+  display: flex;
+  justify-content: space-between;
+  color: #494949;
+}
+
+.header-clients{
+  text-align: center;
+}
+
+.client-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ceo-intro{
+  display: flex;
+margin: 5% 15% 0 -5px;
+gap: 2%;
+}
+
+.ceo-intro p{
+  margin-top: 5%;
+  text-align: left;
+  margin-right: 5%;
+}
+
+.ceo-intro-divider{
+  width: 25%;
+  height: 5px;
+  margin-left: 14%;
+  margin-bottom: 5%;
+  background-color: var(--yellow);
+}
+
+
+.footer-content{
+  display: flex;
+  gap: 30px;
+}
+
+.footer-about-content{
+  font-size: 12px;
+  text-align: left;
+  
+}
+.underline{
+  width: 250px;
+  height: 2px;
+  background-color: var(--green);
+}
+.footer-instagram{
+  display: block;
+}
+
+.insta-underline{
+  width: 85%;
+  height: 2px;
+  background-color: var(--light-blue);
+  margin-bottom: 15px;
+}
+.photos{
+  width: 250px;
+}
+.footer-mastodon{
+  flex: 2;
+}
+.mastodon-underline{
+  width: 85%;
+  height: 2px;
+  background-color: var(--yellow);
+
+}
+.footer-mastodon-content{
+  font-size: 12px;
+  
+}
+.footer-social-media{
+  flex: 1;
+}
+
+.social-underline{
+  width:250px;
+  height: 2px;
+  background-color: var(--light-blue);
+  margin-bottom: 15px;
+}
+.colour-bar{
+  display: flex;
+  margin-bottom: 50px;
+}
+.blue-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--dark-blue);
+}
+
+.red-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--red);
+}
+
+.light-blue-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--light-blue);
+}
+
+.pink-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: #F6679C;
+}
+
+.yellow-box{
+  width: 55px;
+  height: 55px;
+  border-radius: 15%;
+  background-color: var(--yellow);
+}
+
+input{
+  width: 200px;
+  height:30px;
+  background-color: var(--red);
+  border: none;
+  color: white;
+}
+
+.send-icon{
+  width: 30px;
+  height: 30px;
+  background-color: var(--yellow);
+ 
+}
+
+.green-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--green);
+}
+
+.yellow-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--yellow);
+}
+
+.red-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--red);
+}
+
+.light-blue-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--light-blue);
+}
+
+.blue-dialog-box{
+  height: 5px;
+  width: 30px;
+  background-color: var(--dark-blue);
+}
+
