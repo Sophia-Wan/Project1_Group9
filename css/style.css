@@ -212,7 +212,6 @@ li:nth-child(5) {
 
 .blog-entry {
   flex: 1 1 calc(33.33% - 16px); 
-  max-width: 33.33%;
   box-sizing: border-box;
   padding: 1rem;
 }
@@ -284,43 +283,41 @@ li:nth-child(5) {
 /* Tablet (632px) */
 @media (max-width: 632px) {
   .blog {
-    grid-template-columns: 1fr; /* First entry takes full width */
-  }
-
-  .blog-entry:first-child {
-    width: 100%;
-  }
-
-  .blog-entry:nth-child(2),
-  .blog-entry:nth-child(3) {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* The two remaining entries side by side */
-  }
-}
-
-/* Mobile (432px) */
-@media (max-width: 432px) {
-  .blog {
-    flex-direction: column; /* Stack elements in a column */
-    align-items: center; /* Center align items */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .blog-entry {
-    width: calc(100% - 32px); /* 100% width minus 16px margin on both sides */
-    margin: 0 16px; /* Ensures 16px margin on both sides */
+    width: 100%; 
   }
 }
-   html {
-    padding: 0;
-    margin: 0;
-    font-family: "Ubuntu", serif;
-  }
-  
+/* Mobile (432px) */
+@media (max-width: 432px) {
   body {
-    width: 70%;
+    width:100%;
     margin: auto;
+    text-align: center;
   }
+
+  .blog-image {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .blog-entry {
+    width: 100vw; 
+  }
+}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -472,16 +469,16 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+/* @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
-}
 
-@media print,
+
+/* @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
-}
+
 
 /* ==========================================================================
    Print styles.
@@ -489,16 +486,16 @@ textarea {
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+/* @media print {
   *,
   *::before,
   *::after {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
-    box-shadow: none !important;
+    /* box-shadow: none !important;
     text-shadow: none !important;
-  }
+  } */ 
 
   a,
   a:visited {
