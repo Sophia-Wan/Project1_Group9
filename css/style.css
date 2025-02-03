@@ -295,13 +295,17 @@ li:nth-child(5) {
 /* Tablet (632px) */
 @media (max-width: 632px) {
   .blog {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    justify-content: center;
+    align-items: center;
   }
 
   .blog-entry {
-    width: 100%; 
+    display: inline-block;
+    width: 45vw; 
+    vertical-align: middle;
   }
 }
 /* Mobile (432px) */
