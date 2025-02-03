@@ -564,20 +564,50 @@ span{
   color: #1EAFDE;
 }
 
-.section-services{
+.section-service-title {
+  line-height: 1vh;
+}
+
+.section-service-title h2{
+  margin-top: 13vh;
+  font-weight: 400;
   text-align: center;
   color: #494949;
 }
 
-.section-services p{
-text-align: left;
-color: #939393;
+.section-service-title h4{
+  font-size: xx-small;
+  font-weight: 100;
+  text-align: center;
+  color: #939393;
 }
 
 .services{
   display: flex;
   justify-content: space-between;
+  margin-top: 6vh;
   color: #494949;
+  gap: 3vw;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 0.5em;
+  font-weight: lighter;
+  line-height: 2.5vh;
+  text-align: justify;
+  margin: 2px 0;
+}
+
+.services h4 {
+  font-size: 0.75em;
+  margin: 2vh 0;
+}
+
+.services img {
+  margin: 1vh;
 }
 /*Client area*/
 .header-clients{
