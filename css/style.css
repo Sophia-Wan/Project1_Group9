@@ -548,6 +548,8 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+
 /* hey folks*/
 .page-intro{
   text-align: center;
@@ -572,6 +574,61 @@ color: #939393;
   display: flex;
   justify-content: space-between;
   color: #494949;
+}
+
+/*Tablet Media Query Medium and Up*/
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em) {
+  .services{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 50px;
+    justify-content: center;            
+    align-items: center;
+  }
+  .section-services p{
+    text-align: center;
+    width:auto;
+    padding: 20px;
+  }
+  /*Mobile Media Query Small*/
+}
+@media screen and (max-width: 39.9375em) {
+ .services{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 30px;
+ }
+
+ .service-idea{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+ .service-camera{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+ .service-point{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+ .service-creative{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+.text{
+  text-align: left;
+}
+.service-icon{
+  margin-top: 6%;
+  height: 70%;
+}
+
 }
 /*Client area*/
 .header-clients{
@@ -780,3 +837,4 @@ input{
 .bottom-colored-bars{
   margin-left: 185px;
 }
+
