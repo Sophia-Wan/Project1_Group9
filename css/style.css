@@ -10,9 +10,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-   .submit{
-    all: unset; 
-  }
+
 /* Global colours */
 :root {
   --green: #25C389;
@@ -1002,6 +1000,4 @@ input{
   width: 20%;
   margin-left: 42%;
 }
-wtf masonry-auto-flow: 
-;
 }
