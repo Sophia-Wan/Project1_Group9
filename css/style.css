@@ -282,16 +282,6 @@ li:nth-child(5) {
   background-color: var(--light-blue);
 }
 
-/* Hover State */
-
-@media (hover: hover) {
-  /* when hover is supported */
-  .blog-entry:hover {
-    color: white;
-    background: var(--light-blue);
-  }
-}
-
 /* Tablet (632px) */
 @media (max-width: 632px) {
   .blog {
