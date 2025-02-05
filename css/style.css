@@ -54,10 +54,10 @@ header {
 
 .mainNav a {
   text-decoration: none;
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
   text-align: left;
-  color: #fff;
   display: flex;
   align-items: flex-end;
   height: 50px; 
@@ -66,6 +66,7 @@ header {
 
 .mainNav span{
   padding-left: 0.5vw;
+  color: #fff;
   font-size: 20px;
   font-weight: lighter;
 }
@@ -257,10 +258,11 @@ li:nth-child(5) {
 }
 
 .blog-entry {
+  display: block;
   flex: 1 1 calc(33.33% - 16px); 
-  max-width: 33.33%;
   box-sizing: border-box;
   padding: 1rem;
+  transition: background-color 0.3s ease-in-out; 
 }
 
 .bg-date {
@@ -330,43 +332,61 @@ li:nth-child(5) {
 /* Tablet (632px) */
 @media (max-width: 632px) {
   .blog {
-    grid-template-columns: 1fr; /* First entry takes full width */
-  }
-
-  .blog-entry:first-child {
-    width: 100%;
-  }
-
-  .blog-entry:nth-child(2),
-  .blog-entry:nth-child(3) {
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* The two remaining entries side by side */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog-entry {
+    display: inline-block;
+    width: 45vw; 
+    vertical-align: middle;
+  }
+
+  /* Blog section styling */
+  .section-blog .blog .blog-entry:first-child{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    justify-content: center;
+    vertical-align: middle;
+  }
+
+  .section-blog .blog .blog-entry:nth-child(2),
+  .section-blog .blog .blog-entry:nth-child(3) {
+    width: fit-content;
   }
 }
 
 /* Mobile (432px) */
 @media (max-width: 432px) {
+  body {
+    width:100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .blog-image {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+
   .blog {
-    flex-direction: column; /* Stack elements in a column */
-    align-items: center; /* Center align items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
   }
 
   .blog-entry {
-    width: calc(100% - 32px); /* 100% width minus 16px margin on both sides */
-    margin: 0 16px; /* Ensures 16px margin on both sides */
+    width: 100vw; 
   }
 }
-   html {
-    padding: 0;
-    margin: 0;
-    font-family: "Ubuntu", serif;
-  }
-  
-  body {
-    width: 70%;
-    margin: auto;
-  }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -518,16 +538,16 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+/* @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
-}
 
-@media print,
+
+/* @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
-}
+
 
 /* ==========================================================================
    Print styles.
@@ -535,16 +555,16 @@ textarea {
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+/* @media print {
   *,
   *::before,
   *::after {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
-    box-shadow: none !important;
+    /* box-shadow: none !important;
     text-shadow: none !important;
-  }
+  } */ 
 
   a,
   a:visited {
@@ -598,29 +618,64 @@ textarea {
 
 
 /* hey folks*/
-.page-intro{
+
+.page-intro h1 {
+  margin-top: 10vh;
+  font-weight: 400;
+  font-size: 1.75rem;
   text-align: center;
   color: #494949;
+  line-height: 7vh;
 }
 
 span{
   color: #1EAFDE;
 }
 
-.section-services{
+.section-service-title {
+  line-height: 1vh;
+}
+
+.section-service-title h2{
+  margin-top: 13vh;
+  font-weight: 400;
   text-align: center;
   color: #494949;
 }
 
-.section-services p{
-text-align: left;
-color: #939393;
+.section-service-title h4{
+  font-size: xx-small;
+  font-weight: 100;
+  text-align: center;
+  color: #939393;
 }
 
 .services{
   display: flex;
   justify-content: space-between;
+  margin-top: 6vh;
   color: #494949;
+  gap: 3vw;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 0.5em;
+  font-weight: lighter;
+  line-height: 2.5vh;
+  text-align: justify;
+  margin: 2px 0;
+}
+
+.services h4 {
+  font-size: 0.75em;
+  margin: 2vh 0;
+}
+
+.services img {
+  margin: 1vh;
 }
 
 /*Tablet Media Query Medium and Up*/
