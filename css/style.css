@@ -338,16 +338,13 @@ li:nth-child(5) {
     grid-template-rows: auto auto;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr; /* First entry takes full width */
   }
   .blog-entry {
     display: inline-block;
     width: 45vw;
     vertical-align: middle;
   }
-  .blog-entry:first-child {
-    width: 100%;
-  }
+ 
   .section-blog .blog .blog-entry:first-child{
     display: grid;
     grid-column: 1 / -1;
