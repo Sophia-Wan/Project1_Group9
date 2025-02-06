@@ -55,10 +55,10 @@ header {
 
 .mainNav a {
   text-decoration: none;
-  color: #fff;
   font-size: 16px;
   font-weight: 500;
   text-align: left;
+  color: #fff;
   display: flex;
   align-items: flex-end;
   height: 50px; 
@@ -67,9 +67,9 @@ header {
 
 .mainNav span{
   padding-left: 0.5vw;
-  color: #fff;
   font-size: 20px;
   font-weight: lighter;
+  color: #fff;
 }
 
 .mainNav li{
@@ -186,6 +186,53 @@ li:nth-child(5) {
   background: var(--yellow);
 }
 
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em) {
+  body{
+    margin: 0;
+  }
+  .banner{
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .banner-background{
+    display: none;
+  }
+  .row{
+    margin-left: 40%;
+    margin-bottom: 2%;
+  }
+  .mainNav{
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .page-header{
+    width: 100%;
+  }
+}
+  /*Mobile Media Query Small*/
+  @media screen and (max-width: 39.9375em){
+  
+    .mainNav{
+      display: none;
+    }
+    .banner-background{
+      display: none;
+    }
+    .banner-flag-container{
+      display: none;
+    }
+    .banner{
+      display: none;
+    }
+    .row{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;     
+  }
+  }
 /* End Angie's header css section */
 
 .blog {
@@ -214,10 +261,11 @@ li:nth-child(5) {
 }
 
 .blog-entry {
+  display: block;
   flex: 1 1 calc(33.33% - 16px); 
-  max-width: 33.33%;
   box-sizing: border-box;
   padding: 1rem;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .bg-date {
@@ -382,274 +430,65 @@ li:nth-child(5) {
   justify-content: space-between;
 }
 
-/* Tablet (632px) */
-@media (max-width: 632px) {
+/* Tablet */
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em) {
+
   .blog {
-    grid-template-columns: 1fr; /* First entry takes full width */
-  }
-
-  .blog-entry:first-child {
-    width: 100%;
-  }
-
-  .blog-entry:nth-child(2),
-  .blog-entry:nth-child(3) {
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* The two remaining entries side by side */
-  }
-}
-
-/* Mobile (432px) */
-@media (max-width: 432px) {
-  .blog {
-    flex-direction: column; /* Stack elements in a column */
-    align-items: center; /* Center align items */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .blog-entry {
-    width: calc(100% - 32px); /* 100% width minus 16px margin on both sides */
-    margin: 0 16px; /* Ensures 16px margin on both sides */
+    display: inline-block;
+    width: 45vw;
+    vertical-align: middle;
+  }
+ 
+  .section-blog .blog .blog-entry:first-child{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    justify-content: center;
+    vertical-align: middle;
+  }
+
+  .section-blog .blog .blog-entry:nth-child(2),
+  .section-blog .blog .blog-entry:nth-child(3) {
+    width: fit-content;
   }
 }
-   html {
-    padding: 0;
-    margin: 0;
-    font-family: "Ubuntu", serif;
-  }
-  
+
+/* Mobile */
+@media screen and (max-width: 39.9375em) {
   body {
-    width: 70%;
+    width:100%;
     margin: auto;
+    text-align: center;
   }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+  .blog-image {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+  .blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
+  .blog-entry {
+    width: 100vw; 
   }
 }
+
 /* hey folks*/
 
 .page-intro h1 {
@@ -712,6 +551,94 @@ span{
 }
 
 
+/*Tablet Media Query Medium and Up*/
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em) {
+
+  .services{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 50px;
+    justify-content: center;            
+    align-items: center;
+  }
+  .section-services p{
+    text-align: center;
+    width:auto;
+    padding: 20px;
+  }
+  /*Mobile Media Query Small*/
+}
+@media screen and (max-width: 39.9375em) {
+  body{
+    margin: 0 auto;
+  }
+ .services{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 30px;
+ }
+
+ .service-idea{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+ .service-camera{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+ .service-point{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+ .service-creative{
+  display: flex;
+  align-items: flex-start;
+ gap: 20px;
+ }
+.text{
+  text-align: left;
+}
+.service-icon{
+  margin-top: 6%;
+  height: 70%;
+}
+
+}
+
+.client-list{
+  display: flex;
+  justify-content: space-between;
+}
+/*Tablet Media Queey Medium and up*/
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em){
+  body{
+    margin: 0 auto;
+  }
+  .client-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: left;
+gap: 10px;
+  }
+}
+ /*Mobile Media Query Small*/
+@media screen and (max-width: 39.9375em) {
+  body{
+    margin: 0 auto;
+  }
+  .client-list{
+    display: none;
+  }
+  .header-clients{
+    display: none ;
+  }
+}
 
 /* Start footer Style */
 footer{
@@ -1016,4 +943,95 @@ button{
 
 .bottom-colored-bars{
   margin-left: 185px;
+}
+/*Tablet Media Query Medium and up*/
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em) {
+body{
+  margin: 0 auto;
+}
+
+.footer-content{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto; 
+}
+.footer-about{
+  width: 70%;
+}
+.photos{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+}
+.ceo-intro-divider{
+  margin-left: 35%;
+}
+.footer-mastodon-content{
+  width: 80%;
+}
+.colour-bar{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin: 5px;
+}
+input{
+ display: flex;
+  align-items: center;
+}
+.bottom-colored-bars{
+  width: 50%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
+  border: none;
+}
+
+.footer-social-media{
+  width: 70%;
+}
+}
+/*Mobile Media Query Small*/
+@media screen and (max-width: 39.9375em) {
+  body{
+    margin: 0 auto;
+  }
+
+ .footer-about{
+  display: none;
+ }
+ .footer-instagram{
+  display: none;
+ }
+ .footer-content{
+  display: flex;
+  flex-direction: column-reverse;
+ }
+ .footer-mastodon-content{
+  width: 100%;
+ }
+ .footer-social-media{
+  margin-left: 50%;
+  width: 70%;
+  margin-top: 0;
+  padding: 5%;
+ }
+ .colour-bar{
+  margin-bottom: 10%;
+ }
+.bottom-colored-bars{
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
+  border: none;
+}
+.ceo-intro-divider{
+  width: 20%;
+  margin-left: 42%;
+}
+
 }
