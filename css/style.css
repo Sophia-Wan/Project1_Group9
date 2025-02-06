@@ -339,19 +339,6 @@ li:nth-child(5) {
   line-height: 1vh;
 }
 
-.section-portfolio h2{
-  font-weight: 400;
-  text-align: center;
-  color: #494949;
-}
-
-.section-portfolio h4{
-  font-size: xx-small;
-  font-weight: 100;
-  text-align: center;
-  color: #939393;
-}
-
 .blog-entry {
   position: relative;
   display: inline-block;
