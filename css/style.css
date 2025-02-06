@@ -236,8 +236,8 @@ li:nth-child(5) {
 
 .blog {
   display: flex;
-  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
-  justify-content: space-between; /* Adjusts spacing between items */
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .blog-intro {
@@ -260,7 +260,6 @@ li:nth-child(5) {
 .blog-entry {
   display: block;
   flex: 1 1 calc(33.33% - 16px); 
-  max-width: 33.33%;
   box-sizing: border-box;
   padding: 1rem;
   transition: background-color 0.3s ease-in-out;
@@ -278,13 +277,13 @@ li:nth-child(5) {
 .date {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center and raise */
+  transform: translate(-50%, -50%); 
   font-size:1.25em;
   font-weight: 200;
 }
 
 .year-month {
-  margin-top: 30px; /* Pushes text down */
+  margin-top: 30px; 
   font-size: 0.75rem;
   font-weight: 200;
 }
@@ -331,7 +330,8 @@ li:nth-child(5) {
 }
 
 /* Tablet (632px) */
-@media (max-width: 632px) {
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em) {
   .blog {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -339,6 +339,7 @@ li:nth-child(5) {
     justify-content: center;
     align-items: center;
   }
+
   .blog-entry {
     display: inline-block;
     width: 45vw;
@@ -360,8 +361,8 @@ li:nth-child(5) {
   }
 }
 
-/* Mobile (432px) */
-@media (max-width: 432px) {
+/* Mobile */
+@media screen and (max-width: 39.9375em) {
   body {
     width:100%;
     margin: auto;
@@ -765,12 +766,20 @@ input{
  .footer-content{
   display: flex;
   flex-direction: column-reverse;
+  margin: 0;
+ }
+ .footer-mastodon{
+  text-align: left;
+ }
+ .footer-social-media{
+  text-align: left;
  }
  .footer-mastodon-content{
   width: 100%;
+  text-align: left;
  }
  .footer-social-media{
-  margin-left: 50%;
+  margin-left: 70%;
   width: 70%;
   margin-top: 0;
   padding: 5%;
@@ -790,4 +799,4 @@ input{
   width: 20%;
   margin-left: 42%;
 }
-}
+} 
