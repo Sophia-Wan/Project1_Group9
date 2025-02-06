@@ -1,0 +1,978 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/* Global colours */
+:root {
+  --green: #25C389;
+  --yellow: #FFB901;
+  --hover-yellow: #F0F08C;
+  --red: #DE6262;
+  --light-blue: #19B2DE;
+  --dark-blue: #265787;
+  --footer-color: #0E2E4E;
+  --gray-banner: #EBEBEB;
+  --font-family: "Ubuntu", serif;
+}
+
+html {
+  padding: 0;
+  margin: auto;
+  font-family: var(--font-family);
+    }
+
+body {
+  width: 70%;
+  margin: auto;
+}
+
+/* Start Angie's header css section */
+header {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  float: left;
+
+}
+
+.row img {
+  margin-top: 44px;
+}
+
+.mainNav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  height: 50px; 
+  padding-left: 0.5vw;
+}
+
+.mainNav span{
+  padding-left: 0.5vw;
+  color: #fff;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.mainNav li{
+  padding: 30px 10px;
+  width: 8vw;
+  height: 5vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex: 1;
+}
+
+.mainNav {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  float: right;
+  
+}
+
+ /* Style colours */
+li:nth-child(1) {
+  background-color: var(--green);
+}
+
+li:nth-child(2) {
+  background-color: var(--yellow);
+}
+
+li:nth-child(3) {
+  background-color: var(--red);
+}
+
+li:nth-child(4) {
+  background-color: var(--light-blue);
+}
+
+li:nth-child(5) {
+  background-color: var(--dark-blue);
+}
+
+.mainNav li:hover {
+  background-color: var(--hover-yellow);
+}
+
+.mainNav li:hover a {
+  color: var(--dark-blue);
+  background-color: transparent;
+}
+
+.mainNav li:hover a span {
+  opacity: 0;
+}
+
+/* Start Banner Css */
+
+.banner {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 512px;
+}
+
+.banner-background {
+  position: absolute;
+  background-color: var(--gray-banner);
+  width: 100%;
+  height: 512px;
+  z-index: -1;
+  left: 0;
+}
+
+.banner-flag-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.page-banner-flag {
+  background-color: white;
+  opacity: 80%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+}
+
+.page-banner-flag h2 {
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+.page-banner-flag::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.blue::before {
+  background: var(--dark-blue);
+}
+
+.red::before {
+  background: var(--red);
+}
+
+.yellow::before {
+  background: var(--yellow);
+}
+
+/* End Angie's header css section */
+
+.blog {
+  display: flex;
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+  justify-content: space-between; /* Adjusts spacing between items */
+  margin-top: 3vh;
+}
+
+.section-blog {
+  line-height: 1vh;
+}
+
+.blog-intro{
+  margin-top: 13vh;
+  font-weight: 400;
+  text-align: center;
+  color: #494949;
+}
+
+.blog-intro__subtitle{
+  font-size: xx-small;
+  font-weight: 100;
+  text-align: center;
+  color: #939393;
+}
+
+.blog-entry {
+  flex: 1 1 calc(33.33% - 16px); 
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.bg-date {
+  display: flex;
+  position: absolute;
+  color:white;
+  background-color: var(--red);
+  width: 3.5vw;
+  height: 5vh;
+
+}
+
+.date {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center and raise */
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.year-month {
+  margin-top: 25px; /* Pushes text down */
+  font-size: 0.2rem !important;
+  font-weight: 100;
+}
+
+.post-info {
+  position: relative;
+  top: -8vh;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  text-align: left;
+  color:white;
+  width: 100%;
+  height: 8vh;
+  background-color: var(--light-blue);
+}
+
+
+.post-title{
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 4px 0;
+
+}
+
+.post-genre{
+  font-size: 0.5rem;
+  font-weight: 100;
+  padding-top: 0.5vh;
+  /* margin: 0; */
+  /* padding-bottom: 4px; */
+}
+
+.blog-image {
+  width: 100%;
+  height: auto; 
+  display: block;
+}
+
+.bg-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px; 
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-color: var(--light-blue);
+}
+
+/* Start section portfolio */
+
+.section-portfolio {
+  line-height: 1vh;
+}
+
+.section-portfolio h2{
+  font-weight: 400;
+  text-align: center;
+  color: #494949;
+}
+
+.section-portfolio h4{
+  font-size: xx-small;
+  font-weight: 100;
+  text-align: center;
+  color: #939393;
+}
+
+.blog-entry {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.blog-image-overlay{
+  position: absolute;
+  top: 2.5vh;
+  left: 1.25vw;
+  width: 89%;
+  height: 87%;
+  background-color: var(--light-blue);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.blog-entry:hover .blog-image-overlay {
+  opacity: 70%;
+}
+
+.text-overlay {
+  position: absolute;
+  padding: 0 10px;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.text-overlay br {
+  font-size: 0.5rem;
+  font-weight: 100;
+  padding-top: 0.5vh;
+}
+
+.blog-entry:hover .text-overlay {
+  opacity: 1;
+}
+
+
+/* Start header clients */
+.header-clients {
+  line-height: 1vh;
+}
+
+.header-clients h2{
+  margin-top: 10vh;
+  font-weight: 400;
+  text-align: center;
+  color: #494949;
+}
+
+.header-clients h4{
+  font-size: xx-small;
+  font-weight: 100;
+  text-align: center;
+  color: #939393;
+}
+
+/*Client area*/
+.header-clients{
+  text-align: center;
+}
+
+.client-list{
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Tablet (632px) */
+@media (max-width: 632px) {
+  .blog {
+    grid-template-columns: 1fr; /* First entry takes full width */
+  }
+
+  .blog-entry:first-child {
+    width: 100%;
+  }
+
+  .blog-entry:nth-child(2),
+  .blog-entry:nth-child(3) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* The two remaining entries side by side */
+  }
+}
+
+/* Mobile (432px) */
+@media (max-width: 432px) {
+  .blog {
+    flex-direction: column; /* Stack elements in a column */
+    align-items: center; /* Center align items */
+  }
+
+  .blog-entry {
+    width: calc(100% - 32px); /* 100% width minus 16px margin on both sides */
+    margin: 0 16px; /* Ensures 16px margin on both sides */
+  }
+}
+   html {
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu", serif;
+  }
+  
+  body {
+    width: 70%;
+    margin: auto;
+  }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* hey folks*/
+
+.page-intro h1 {
+  margin-top: 10vh;
+  font-weight: 400;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #494949;
+  line-height: 7vh;
+}
+
+span{
+  color: #1EAFDE;
+}
+
+.section-service-title {
+  line-height: 1vh;
+}
+
+.section-service-title h2{
+  margin-top: 13vh;
+  font-weight: 400;
+  text-align: center;
+  color: #494949;
+}
+
+.section-service-title h4{
+  font-size: xx-small;
+  font-weight: 100;
+  text-align: center;
+  color: #939393;
+}
+
+.services{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6vh;
+  color: #494949;
+  gap: 3vw;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 0.5em;
+  font-weight: lighter;
+  line-height: 2.5vh;
+  text-align: justify;
+  margin: 2px 0;
+}
+
+.services h4 {
+  font-size: 0.75em;
+  margin: 2vh 0;
+}
+
+.services img {
+  margin: 1vh;
+}
+
+
+
+/* Start footer Style */
+footer{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  margin-top: 5%;
+  background-color: var(--footer-color);
+}
+
+.footer-ceo {
+  margin-top: 3vh;
+  margin-left: 4vw;
+}
+
+.ceo-intro{
+  display: flex;
+  width: 75%;
+  margin: auto;
+}
+
+.ceo-intro p{
+  width: 50%;
+  margin-left: 3%;
+  text-align: left;
+  color: white;
+  font-size: 12px;
+  margin-top: 4vh;
+  line-height: 18px;
+}
+
+.ceo-intro-divider{
+  width: 8%;
+  height: 2.5px;
+  margin-left: 21.5vw;
+  background-color: var(--yellow);
+  margin-top: 1.5vh;
+}
+
+.footer-content{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  gap: 2%;
+  color:white;
+  justify-content: space-between;
+}
+
+/*about us*/
+.footer-about{
+  flex: 2;
+  flex-direction: column;
+  display: flex;
+}
+
+.footer-about p{
+  margin-top: 2.5vh;
+  font-size: 12px;
+  text-align: left;
+  color: white;
+  line-height: 18px;
+}
+
+.footer-about h5{
+  color: var(--yellow);
+  margin-bottom: 2%;
+  font-weight: 400;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15vw;
+  height: 1px;
+  background-color: var(--green);
+  left: 14.8vw; 
+}
+
+.underline::before { /*adjust the triangle*/
+  content: "";
+  position: absolute;
+  left: 16vw; 
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--green); /* Green triangle color */
+}
+
+/*instagram*/
+.footer-instagram{
+  flex: 2;
+}
+
+.footer-instagram h5{
+  color: var(--red);
+  margin-bottom: 2%;
+  font-weight: 500;
+}
+
+.insta-underline::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14.5vw;
+    height: 1px;
+    background-color: var(--light-blue);
+    left: 31.25vw; 
+  }
+  
+  .insta-underline::before {  /*adjust the triangle*/
+    content: "";
+    position: absolute;
+    left: 32.5vw; 
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid var(--light-blue); /* Green triangle color */
+  }
+
+.photos{
+  margin-top: 3vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7% 2%;
+  align-items: center; 
+  justify-content: center;
+  object-fit: cover;
+}
+
+/*mastodon*/
+.footer-mastodon{
+  flex: 3;
+}
+
+.footer-mastodon h5{
+  color: var(--light-blue);
+  margin-bottom: 2%;
+  font-weight: 500;
+}
+
+
+.mastodon-underline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14.5vw;
+  height: 1px;
+  background-color: var(--yellow);
+  left: 47.75vw; 
+}
+
+.mastodon-underline::before {  /*adjust the triangle*/
+  content: "";
+  position: absolute;
+  left: 49vw; 
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--yellow); /* Green triangle color */
+}
+
+.footer-mastodon-content{
+  margin-top: 3vh;
+  font-size: 12px;
+  width: 450px;
+  padding: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+  text-align: justify;
+  line-height: 18px;
+}
+
+/*track us*/
+.footer-social-media {
+  flex: 1;
+  height: auto;
+}
+.footer-social-media h5{
+ margin-bottom: 2%;
+}
+.social-underline{
+  width:175px;
+  height: 2px;
+  background-color: var(--light-blue);
+  margin-bottom: 13px;
+}
+
+.colour-bar{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  margin-bottom: 50px;
+}
+.blue-box{
+  width: 40px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: blue;
+}
+
+.red-box{
+  width: 40px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: var(--red);
+}
+
+.light-blue-box{
+  width: 40px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: var(--light-blue);
+}
+
+.pink-box{
+  width: 40px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #F6679C;
+}
+
+.yellow-box{
+  width: 40px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: var(--yellow);
+}
+/*enter your email*/
+.newsletter-form {
+  display: flex; 
+  align-items: center;
+  gap: 5px; 
+}
+
+input{
+  width: 150px;
+  height:30px;
+  background-color: var(--red);
+  border: none;
+}
+::placeholder{
+  color: white;
+}
+
+.submit{
+  all: unset; 
+}
+
+.send-icon{
+  width: 30px;
+  height: 30px;
+  background-color: var(--yellow);
+ 
+}
+
+.bottom-colored-bars{
+  margin-left: 185px;
+}
