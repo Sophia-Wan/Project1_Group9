@@ -428,22 +428,37 @@ li:nth-child(5) {
 
   .blog-entry {
     display: inline-block;
-    width: 45vw;
+    width: 50vw;
     vertical-align: middle;
+  }
+
+  #first-post-info {
+    bottom: 33.85vw;
+  }
+  .bg-date {
+    position: relative;
+    width: 6vw;
+    top: 4.5vh;
   }
  
   .section-blog .blog .blog-entry:first-child{
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: 1fr;
+    grid-template-rows: min-content;
     width: 100vw;
+    height: 55vw;
     justify-content: center;
     vertical-align: middle;
+    overflow: hidden;
   }
+
 
   .section-blog .blog .blog-entry:nth-child(2),
   .section-blog .blog .blog-entry:nth-child(3) {
-    width: fit-content;
+    display: inline-block;
+    width: 50vw;
+    vertical-align: middle;
   }
 }
 
