@@ -433,7 +433,8 @@ li:nth-child(5) {
   }
 
   #first-post-info {
-    bottom: 33.85vw;
+    position: relative;
+    bottom: 28vh;
   }
   .bg-date {
     position: relative;
@@ -470,21 +471,30 @@ li:nth-child(5) {
     text-align: center;
   }
 
-  .blog-image {
-    width: 100vw;
-    height: auto;
-    object-fit: contain;
-  }
   .blog {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
   }
 
-  .blog-entry {
-    width: 100vw; 
+  .bg-date {
+    position: relative;
+    width: 12vw;
+    top: 4.5vh;
+  }
+
+  .post-info {
+    bottom: 6vh;
+  }
+  
+  .section-blog .blog-entry {
+    width: 100vw;
+    max-height: 55vh; 
+    overflow: hidden;
+    margin-bottom: -12vh;
+  }
+
+  .section-portfolio .blog-entry {
+    margin-bottom: -1vh;
   }
 }
 
