@@ -192,6 +192,7 @@ li:nth-child(5) {
   display: flex;
   flex-wrap: wrap; /* Ensures items wrap on smaller screens */
   justify-content: space-between; /* Adjusts spacing between items */
+
   margin-top: 3vh;
 }
 
@@ -211,6 +212,25 @@ li:nth-child(5) {
   font-weight: 100;
   text-align: center;
   color: #939393;
+
+}
+
+.blog-intro {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-top: 4rem;
+  padding-bottom: 2px;
+}
+
+.blog-intro__subtitle {
+  margin: 0;
+  text-align: center;
+  font-weight: 100;
+  padding-bottom: 2rem;
+  color: gray;
+
 }
 
 .blog-entry {
@@ -225,8 +245,10 @@ li:nth-child(5) {
   position: absolute;
   color:white;
   background-color: var(--red);
+
   width: 3.5vw;
   height: 5vh;
+
 
 }
 
@@ -234,6 +256,7 @@ li:nth-child(5) {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%); /* Center and raise */
+
   font-size: 0.75rem;
   font-weight: 300;
 }
@@ -242,10 +265,12 @@ li:nth-child(5) {
   margin-top: 25px; /* Pushes text down */
   font-size: 0.2rem !important;
   font-weight: 100;
+
 }
 
 .post-info {
   position: relative;
+
   top: -8vh;
   box-sizing: border-box;
   padding: 12px 20px;
@@ -253,40 +278,49 @@ li:nth-child(5) {
   color:white;
   width: 100%;
   height: 8vh;
+
   background-color: var(--light-blue);
 }
 
 
 .post-title{
+
   font-size: 1rem;
   font-weight: 300;
+
   margin: 4px 0;
 
 }
 
 .post-genre{
+
   font-size: 0.5rem;
   font-weight: 100;
   padding-top: 0.5vh;
   /* margin: 0; */
   /* padding-bottom: 4px; */
+
 }
 
 .blog-image {
   width: 100%;
-  height: auto; 
+  height: auto;
   display: block;
+
 }
 
 .bg-icon {
   position: absolute;
+
   bottom: 15px;
   right: 15px; 
   width: 30px;
   height: 30px;
+
   background-size: cover;
   background-color: var(--light-blue);
 }
+
 
 /* Start section portfolio */
 
@@ -381,6 +415,7 @@ li:nth-child(5) {
   display: flex;
   justify-content: space-between;
 }
+
 
 /* Tablet (632px) */
 @media (max-width: 632px) {
@@ -659,11 +694,13 @@ textarea {
   text-align: center;
   color: #494949;
   line-height: 7vh;
+
 }
 
 span{
   color: #1EAFDE;
 }
+
 
 .section-service-title {
   line-height: 1vh;
@@ -672,6 +709,7 @@ span{
 .section-service-title h2{
   margin-top: 13vh;
   font-weight: 400;
+
   text-align: center;
   color: #494949;
 }
@@ -681,11 +719,13 @@ span{
   font-weight: 100;
   text-align: center;
   color: #939393;
+
 }
 
 .services{
   display: flex;
   justify-content: space-between;
+
   margin-top: 6vh;
   color: #494949;
   gap: 3vw;
@@ -713,6 +753,7 @@ span{
 
 
 
+
 /* Start footer Style */
 footer{
   width: 100%;
@@ -721,20 +762,26 @@ footer{
   left: 0;
   margin-top: 5%;
   background-color: var(--footer-color);
+
 }
 
 .footer-ceo {
   margin-top: 3vh;
+
   margin-left: 4vw;
+
 }
 
 .ceo-intro{
   display: flex;
+
   width: 75%;
+
   margin: auto;
 }
 
 .ceo-intro p{
+
   width: 50%;
   margin-left: 3%;
   text-align: left;
@@ -750,16 +797,19 @@ footer{
   margin-left: 21.5vw;
   background-color: var(--yellow);
   margin-top: 1.5vh;
+
 }
 
 .footer-content{
   width: 70%;
   margin: auto;
   display: flex;
+
   gap: 1%;
   color:white;
   justify-content: space-between;
 }
+
 
 /*about us*/
 .footer-about{
@@ -769,6 +819,7 @@ footer{
 }
 
 .footer-about p{
+
   margin-top: 2.5vh;
   font-size: 12px;
   text-align: left;
@@ -805,9 +856,11 @@ footer{
   border-top: 6px solid var(--green); /* Green triangle color */
 }
 
+
 /*instagram*/
 .footer-instagram{
   flex: 2;
+
 }
 
 .footer-instagram h5{
@@ -849,10 +902,12 @@ footer{
   object-fit: cover;
 }
 
+
 /*mastodon*/
 .footer-mastodon{
   flex: 3;
 }
+
 
 
 .footer-mastodon h5{
@@ -896,6 +951,23 @@ footer{
   margin-left: -2vw;
 }
 
+.footer-mastodon h5{
+  color: var(--light-blue);
+  margin-bottom: 2%;
+}
+
+.mastodon-underline{
+  width: 85%;
+  height: 2px;
+  background-color: var(--yellow);
+
+}
+.footer-mastodon-content{
+  font-size: 12px;
+  width: 250px;
+
+}
+
 /*track us*/
 .footer-social-media {
   flex: 1;
@@ -903,6 +975,7 @@ footer{
 }
 .footer-social-media h5{
  margin-bottom: 2%;
+
  font-size: 15px;
  margin-left: -0.75vw;
 }
@@ -950,25 +1023,56 @@ footer{
 .red-box{
   width: 35px;
   height: 35px;
+
+}
+.social-underline{
+  width:175px;
+  height: 2px;
+  background-color: var(--light-blue);
+  margin-bottom: 13px;
+}
+
+.colour-bar{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  margin-bottom: 50px;
+}
+.blue-box{
+  width: 35px;
+  height: 35px;
+  border-radius: 5%;
+  background-color: blue;
+}
+
+.red-box{
+  width: 35px;
+  height: 35px;
+
   border-radius: 5%;
   background-color: var(--red);
 }
 
 .light-blue-box{
+
   width: 35px;
   height: 35px;
+
   border-radius: 5%;
   background-color: var(--light-blue);
 }
 
 .pink-box{
+
   width: 35px;
   height: 35px;
+
   border-radius: 5%;
   background-color: #F6679C;
 }
 
 .yellow-box{
+
   width: 35px;
   height: 35px;
   border-radius: 5%;
@@ -1012,8 +1116,9 @@ button{
   position: relative;
   border: none;
   border-radius: 4px;
+
 }
 
-.bottom-colored-bars{
+.bottom-colored-bars {
   margin-left: 185px;
 }
