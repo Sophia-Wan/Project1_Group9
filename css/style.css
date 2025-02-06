@@ -518,6 +518,7 @@ span{
 }
 
 .section-service-title h2{
+  font-size: 1.75em;
   margin-top: 13vh;
   font-weight: 400;
   text-align: center;
@@ -525,7 +526,7 @@ span{
 }
 
 .section-service-title h4{
-  font-size: xx-small;
+  font-size: 0.75em;
   font-weight: 100;
   text-align: center;
   color: #939393;
@@ -543,7 +544,7 @@ span{
 }
 
 .services p {
-  font-size: 0.5em;
+  font-size: 0.75em;
   font-weight: lighter;
   line-height: 2.5vh;
   text-align: justify;
@@ -551,7 +552,7 @@ span{
 }
 
 .services h4 {
-  font-size: 0.75em;
+  font-size: 1em;
   margin: 2vh 0;
 }
 
@@ -559,7 +560,9 @@ span{
   margin: 1vh;
 }
 
-
+.header-clients h4 {
+  font-size: 0.75em;
+}
 /*Tablet Media Query Medium and Up*/
 @media screen and  (min-width: 40em) and
 (max-width: 63.9375em) {
