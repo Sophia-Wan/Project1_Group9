@@ -329,8 +329,9 @@ li:nth-child(5) {
   background-color: var(--light-blue);
 }
 
-/* Tablet (632px) */
-@media (max-width: 632px) {
+/* Tablet */
+@media screen and  (min-width: 40em) and
+(max-width: 63.9375em) {
   .blog {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -338,6 +339,7 @@ li:nth-child(5) {
     justify-content: center;
     align-items: center;
   }
+
   .blog-entry {
     display: inline-block;
     width: 45vw;
@@ -359,8 +361,8 @@ li:nth-child(5) {
   }
 }
 
-/* Mobile (432px) */
-@media (max-width: 432px) {
+/* Mobile */
+@media screen and (max-width: 39.9375em) {
   body {
     width:100%;
     margin: auto;
