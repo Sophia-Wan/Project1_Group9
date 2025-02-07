@@ -125,7 +125,6 @@ li:nth-child(5) {
 }
 
 /* Start Banner Css */
-
 .banner {
   margin: 0;
   padding: 0;
@@ -211,8 +210,9 @@ li:nth-child(5) {
   max-width: 100%;
   height: auto;
   flex: 1;
+  margin: auto;
 }
-  
+
 .banner-background {
   position: absolute;
   background-color: var(--gray-banner);
@@ -228,7 +228,6 @@ header .row{
   width: 100%;
 }
 
-  
   .mainNav{
     width: 100%;
     height: auto;
@@ -253,54 +252,7 @@ header .row{
 }
 
 }
-  /*Mobile Media Query Small*/
-  @media screen and (max-width: 39.9375em){
-  
-    .mainNav{
-      display: none;
-    }
-    .banner-background{
-      display: none;
-    }
-    .banner-flag-container{
-      display: none;
-    }
-    .banner{
-      display: none;
-    }
-    .row{
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;     
-  }
-  }
-
-@media screen and  (min-width: 40em) and
-(max-width: 63.9375em) {
-  body{
-    margin: 0;
-  }
-  .banner{
-    display: flex;
-    width: 100%;
-    flex-shrink: 0;
-  }
-  .banner-background{
-    display: none;
-  }
-  .row{
-    margin-left: 40%;
-    margin-bottom: 2%;
-  }
-  .mainNav{
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
-  .page-header{
-    width: 100%;
-  }
-}
+ 
   /*Mobile Media Query Small*/
   @media screen and (max-width: 39.9375em){
   
@@ -342,7 +294,6 @@ header .row{
   color: #494949;
 }
 
-
 .blog-intro__subtitle{
   font-size: 0.75rem;
   font-weight: 100;
@@ -372,25 +323,23 @@ header .row{
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%); /* Center and raise */
-  font-weight: 300;
   font-size: 1rem;
+  font-weight: 300;
 }
 
 .year-month {
-  margin-top: 25px; /* Pushes text down */
-  font-weight: 100;
+  margin-top: 25px;
   font-size: 0.5rem;
+  font-weight: 100;
 }
 
 .post-info {
   position: relative;
-  top: -8vh;
   box-sizing: border-box;
   padding: 12px 20px;
   text-align: left;
   color:white;
   width: 100%;
-  height: 8vh;
   background-color: var(--light-blue);
 }
 
@@ -399,12 +348,12 @@ header .row{
   font-size: 1rem;
   font-weight: 300;
   margin: 4px 0 0 0;
+
 }
 
 .post-genre{
   font-size: 0.75rem;
   font-weight: 100;
-  padding-top: 0.5vh;
   margin: 8px 0 0 0;
 }
 
@@ -425,6 +374,7 @@ header .row{
 }
 
 /* Start section portfolio */
+
 .section-portfolio {
   line-height: 1vh;
 }
@@ -472,6 +422,7 @@ header .row{
 .blog-entry:hover .text-overlay {
   opacity: 1;
 }
+
 
 /* Start header clients */
 .header-clients {
@@ -601,6 +552,7 @@ header .row{
     flex-direction: column;
   }
 
+
   .bg-date {
     position: relative;
     width: 12vw;
@@ -637,6 +589,7 @@ header .row{
     color: white;
     font-size: 1.25rem;
     line-height: 18px;
+  
   }
   
   .text-overlay br {
@@ -671,7 +624,6 @@ span{
 }
 
 .section-service-title h2{
-  font-size: 1.75em;
   margin-top: 13vh;
   font-weight: 400;
   text-align: center;
@@ -679,12 +631,22 @@ span{
 }
 
 .section-service-title h4{
-  font-size: 0.75em;
+  font-size: xx-small;
   font-weight: 100;
   text-align: center;
   color: #939393;
 }
 
+.services{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6vh;
+  color: #494949;
+  gap: 3vw;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
 
 .services p {
   font-size: 0.75em;
@@ -850,7 +812,6 @@ footer{
   justify-content: space-between;
 }
 
-
 /*about us*/
 .footer-about{
   flex: 2;
@@ -872,8 +833,8 @@ footer{
   margin-bottom: 2%;
   font-weight: 400;
   font-size: 15px;
+  position: relative;
 }
-
 
 .underline::after {
   content: "";
@@ -891,22 +852,22 @@ footer{
   left: 16vw; 
   width: 0;
   height: 0;
+  border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid var(--green); /* Green triangle color */
 }
-
 
 /*instagram*/
 .footer-instagram{
   flex: 2;
 }
 
-
 .footer-instagram h5{
   color: var(--red);
   margin-bottom: 2%;
   font-weight: 500;
   font-size: 15px;
+  position: relative;
 }
 
 .insta-underline::after {
@@ -916,7 +877,7 @@ footer{
     width: 14.5vw;
     height: 1px;
     background-color: var(--light-blue);
-    left: 31.75vw; 
+    left: 31.5vw; 
   }
   
   .insta-underline::before {  /*adjust the triangle*/
@@ -925,10 +886,10 @@ footer{
     left: 32.5vw; 
     width: 0;
     height: 0;
+    border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid var(--light-blue); /* Green triangle color */
   }
-
 
 .photos{
   margin-top: 3vh;
@@ -940,7 +901,6 @@ footer{
   justify-content: center;
   object-fit: cover;
 }
-
 
 /*mastodon*/
 .footer-mastodon{
@@ -954,7 +914,7 @@ footer{
   font-weight: 500;
   font-size: 15px;
   position: relative;
-  right: 1vw;
+  right: .2vw;
   margin-left: -0.75vw;
 }
 
@@ -1000,7 +960,6 @@ footer{
  margin-left: -0.75vw;
 }
 
-
 .social-underline::after {
   content: "";
   display: block;
@@ -1018,6 +977,7 @@ footer{
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
   border-top: 6px solid var(--light-blue); /* Green triangle color */
 }
 
@@ -1030,7 +990,6 @@ footer{
   object-fit: cover;
   margin-top: 3.5vh;
 }
-
 
 .blue-box{
   width: 35px;
@@ -1074,7 +1033,6 @@ footer{
   display: flex;
   height: 2rem;
   margin-top: 4vh;
-
 }
 
 input{
@@ -1085,8 +1043,7 @@ input{
   border-radius: 4px 0 0 4px;
   border: none;
   padding: 0.5vh 0;
-  margin-left: -0.5vw;
-  padding: 0.5vh 0;
+  
 }
 
 ::placeholder{
