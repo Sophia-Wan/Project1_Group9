@@ -669,37 +669,10 @@ li:nth-child(5) {
     margin-bottom: -10vh;
   }
 
-  .blog-image-overlay {
-    width: 94%;
-    height: 93%;
-    margin-left: -0.25vw;
-    margin-top: 0vh;
+  .blog-image-overlay, .text-overlay {
+    display: none;
   }
-
-  .blog-entry:hover .blog-image-overlay {
-    opacity: 70%;
-  }
-
-  .text-overlay {
-    padding: 0 10px;
-    bottom: 30px;
-    left: 30px;
-    color: white;
-    font-size: 1.25rem;
-    line-height: 18px;
-    text-align: left;
-  }
-
-  .text-overlay span {
-    font-size: 0.75rem;
-    font-weight: 100;
-    padding-top: 0.5vh;
-    color: white;
-  }
-
-  .blog-entry:hover .text-overlay {
-    opacity: 1;
-  }
+  
 }
 
 /* hey folks*/
@@ -838,38 +811,12 @@ span {
     justify-content: left;
     gap: 10px;
   }
+  
+  .blog-image-overlay, .text-overlay {
+    display: none;
+  }
 }
 
-.blog-image-overlay {
-  min-width: 91%;
-  min-height: 88.75%;
-  left: 3.25vw;
-  top: 2vh;
-}
-
-.blog-entry:hover .blog-image-overlay {
-  opacity: 70%;
-}
-
-.text-overlay {
-  padding: 0 10px;
-  bottom: 30px;
-  left: 30px;
-  color: white;
-  font-size: 1.25rem;
-  line-height: 18px;
-}
-
-.text-overlay span {
-  font-size: 0.75rem;
-  font-weight: 100;
-  padding-top: 0.5vh;
-  color: white;
-}
-
-.blog-entry:hover .text-overlay {
-  opacity: 1;
-}
 
 /*Mobile Media Query Small*/
 @media screen and (max-width: 39.9375em) {
